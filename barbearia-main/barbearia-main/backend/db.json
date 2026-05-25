@@ -1,0 +1,71 @@
+{
+  "users": [],
+  "services": [
+    {
+      "id": 1,
+      "category": "Barba",
+      "name": "Barba",
+      "description": "Tratamento completo para a sua barba.",
+      "price": 35,
+      "duration": 30,
+      "image": "/services/beard.png"
+    },
+    {
+      "id": 2,
+      "category": "Barba",
+      "name": "Bigode",
+      "description": "Aparo e alinhamento do bigode.",
+      "price": 15,
+      "duration": 15,
+      "image": "/services/beard.png"
+    },
+    {
+      "id": 3,
+      "category": "Combos",
+      "name": "Cabelo Barba e Graxa",
+      "description": "Corte, barba e alisamento (graxa).",
+      "price": 90,
+      "duration": 90,
+      "image": "/services/signature.png"
+    },
+    {
+      "id": 4,
+      "category": "Combos",
+      "name": "Cabelo e Barba",
+      "description": "Corte de cabelo e barba.",
+      "price": 70,
+      "duration": 60,
+      "image": "/services/signature.png"
+    },
+    {
+      "id": 5,
+      "category": "Cabelo",
+      "name": "Corte",
+      "description": "Corte de cabelo do seu estilo.",
+      "price": 35,
+      "duration": 40,
+      "image": "/services/fade.png"
+    },
+    {
+      "id": 6,
+      "category": "Tratamentos",
+      "name": "Graxa, alisamento",
+      "description": "Alisamento capilar (graxa).",
+      "price": 35,
+      "duration": 45,
+      "image": "/services/modern.png"
+    },
+    {
+      "id": 7,
+      "category": "Estética",
+      "name": "Sombrancelha",
+      "description": "Alinhamento da sobrancelha.",
+      "price": 15,
+      "duration": 15,
+      "image": "/services/classic.png"
+    }
+  ],
+  "appointments": [],
+  "products": [],
+  "orders": []
+}
