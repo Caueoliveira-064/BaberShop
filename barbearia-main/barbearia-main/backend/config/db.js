@@ -19,13 +19,34 @@ const inMemoryDB = {
 
 // Seeding initial services directly into memory
 inMemoryDB.services.push(
-  { id: 1, category: 'Barba', name: 'Barba', description: 'Tratamento completo para a sua barba.', price: 35.00, duration: 30, image: '/services/beard.png' },
-  { id: 2, category: 'Barba', name: 'Bigode', description: 'Aparo e alinhamento do bigode.', price: 15.00, duration: 15, image: '/services/beard.png' },
-  { id: 3, category: 'Combos', name: 'Cabelo Barba e Graxa', description: 'Corte, barba e alisamento (graxa).', price: 90.00, duration: 90, image: '/services/signature.png' },
-  { id: 4, category: 'Combos', name: 'Cabelo e Barba', description: 'Corte de cabelo e barba.', price: 70.00, duration: 60, image: '/services/signature.png' },
-  { id: 5, category: 'Cabelo', name: 'Corte', description: 'Corte de cabelo do seu estilo.', price: 35.00, duration: 40, image: '/services/fade.png' },
-  { id: 6, category: 'Tratamentos', name: 'Graxa, alisamento', description: 'Alisamento capilar (graxa).', price: 35.00, duration: 45, image: '/services/modern.png' },
-  { id: 7, category: 'Estética', name: 'Sombrancelha', description: 'Alinhamento da sobrancelha.', price: 15.00, duration: 15, image: '/services/classic.png' }
+  // ── BARBA ──────────────────────────────────────────────
+  { id: 1,  category: 'Barba',      name: 'Barba Completa',        description: 'Modelagem, aparo e hidratação da barba.',              price: 35,  duration: 30, image: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=800&auto=format&fit=crop' },
+  { id: 2,  category: 'Barba',      name: 'Bigode',                description: 'Aparo e alinhamento do bigode.',                      price: 15,  duration: 15, image: 'https://images.unsplash.com/photo-1589570910256-05fceafa5432?w=800&auto=format&fit=crop' },
+  { id: 3,  category: 'Barba',      name: 'Barba com Toalha Quente', description: 'Barba completa com estufa e toalha quente.',         price: 50,  duration: 40, image: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&auto=format&fit=crop' },
+  { id: 4,  category: 'Barba',      name: 'Barba Degradê',         description: 'Degradê na barba com acabamento perfeito.',           price: 45,  duration: 35, image: 'https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?w=800&auto=format&fit=crop' },
+
+  // ── CABELO ─────────────────────────────────────────────
+  { id: 5,  category: 'Cabelo',     name: 'Corte Clássico',        description: 'Corte tradicional com tesoura e pente.',              price: 35,  duration: 40, image: 'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800&auto=format&fit=crop' },
+  { id: 6,  category: 'Cabelo',     name: 'Fade / Degradê',        description: 'Degradê moderno nas laterais e nuca.',                price: 40,  duration: 45, image: 'https://images.unsplash.com/photo-1634302086498-7aa00d6dbc97?w=800&auto=format&fit=crop' },
+  { id: 7,  category: 'Cabelo',     name: 'Corte Navalhado',       description: 'Acabamento com navalha para um visual afiado.',       price: 45,  duration: 50, image: 'https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=800&auto=format&fit=crop' },
+  { id: 8,  category: 'Cabelo',     name: 'Corte Infantil',        description: 'Corte especial para os pequenos da casa.',            price: 25,  duration: 30, image: 'https://images.unsplash.com/photo-1560066984-138daaa4e3e9?w=800&auto=format&fit=crop' },
+
+  // ── COMBOS ─────────────────────────────────────────────
+  { id: 9,  category: 'Combos',     name: 'Cabelo + Barba',        description: 'Corte de cabelo e barba completa.',                   price: 70,  duration: 60, image: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=800&auto=format&fit=crop' },
+  { id: 10, category: 'Combos',     name: 'Cabelo + Barba + Graxa',description: 'Corte, barba e alisamento com graxa.',                price: 90,  duration: 90, image: 'https://images.unsplash.com/photo-1517832606299-7ae9b720a176?w=800&auto=format&fit=crop' },
+  { id: 11, category: 'Combos',     name: 'Combo Premium VIP',     description: 'Corte, barba, sobrancelha e hidratação capilar.',     price: 120, duration: 100,image: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=800&auto=format&fit=crop' },
+  { id: 12, category: 'Combos',     name: 'Noivos & Eventos',      description: 'Pacote completo para noivos e ocasiões especiais.',   price: 150, duration: 120,image: 'https://images.unsplash.com/photo-1504703395950-b89145a5425b?w=800&auto=format&fit=crop' },
+
+  // ── TRATAMENTOS ────────────────────────────────────────
+  { id: 13, category: 'Tratamentos',name: 'Hidratação Capilar',    description: 'Máscara nutritiva para cabelos ressecados.',         price: 40,  duration: 45, image: 'https://images.unsplash.com/photo-1620188526357-882ed42b1c0f?w=800&auto=format&fit=crop' },
+  { id: 14, category: 'Tratamentos',name: 'Graxa / Alisamento',    description: 'Alisamento capilar com graxa de acabamento.',        price: 35,  duration: 45, image: 'https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=800&auto=format&fit=crop' },
+  { id: 15, category: 'Tratamentos',name: 'Relaxamento Capilar',   description: 'Tratamento suavizante para cabelos crespos.',        price: 60,  duration: 60, image: 'https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?w=800&auto=format&fit=crop' },
+  { id: 16, category: 'Tratamentos',name: 'Coloração / Pintura',   description: 'Coloração profissional com pigmentos premium.',      price: 80,  duration: 75, image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&auto=format&fit=crop' },
+
+  // ── ESTÉTICA ───────────────────────────────────────────
+  { id: 17, category: 'Estética',   name: 'Sobrancelha',           description: 'Alinhamento da sobrancelha com linha ou navalha.',   price: 15,  duration: 15, image: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&auto=format&fit=crop' },
+  { id: 18, category: 'Estética',   name: 'Limpeza de Pele',       description: 'Limpeza profunda dos poros e remoção de cravos.',    price: 55,  duration: 50, image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&auto=format&fit=crop' },
+  { id: 19, category: 'Estética',   name: 'Massagem Capilar',      description: 'Relaxamento e estimulação do couro cabeludo.',       price: 30,  duration: 20, image: 'https://images.unsplash.com/photo-1559599101-f09722fb4948?w=800&auto=format&fit=crop' }
 );
 
 // Pre-seeding an admin user (Pass: 123)
@@ -38,6 +59,46 @@ inMemoryDB.users.push({
   subscription: 'premium',
   image: '/services/imagem.jpg'
 });
+
+// Pre-seeded barber team
+inMemoryDB.users.push(
+  {
+    id: 1001,
+    name: 'Rafael Costa',
+    email: 'rafael@tchesco.com',
+    password: '$2b$10$mhHTdiuE5dO0vTDoRnygE.pGly/EzX8yrcnEx5Ty6.x966U7ygnBG',
+    role: 'barber',
+    subscription: null,
+    image: 'https://images.unsplash.com/photo-1618077360395-f3068be8e001?w=200&h=200&fit=crop&crop=face'
+  },
+  {
+    id: 1002,
+    name: 'Diego Alves',
+    email: 'diego@tchesco.com',
+    password: '$2b$10$mhHTdiuE5dO0vTDoRnygE.pGly/EzX8yrcnEx5Ty6.x966U7ygnBG',
+    role: 'barber',
+    subscription: null,
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face'
+  },
+  {
+    id: 1003,
+    name: 'Bruno Ferreira',
+    email: 'bruno@tchesco.com',
+    password: '$2b$10$mhHTdiuE5dO0vTDoRnygE.pGly/EzX8yrcnEx5Ty6.x966U7ygnBG',
+    role: 'barber',
+    subscription: null,
+    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face'
+  },
+  {
+    id: 1004,
+    name: 'Gustavo Lima',
+    email: 'gustavo@tchesco.com',
+    password: '$2b$10$mhHTdiuE5dO0vTDoRnygE.pGly/EzX8yrcnEx5Ty6.x966U7ygnBG',
+    role: 'barber',
+    subscription: null,
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face'
+  }
+);
 
 const db = {
   query: async (sql, params) => {

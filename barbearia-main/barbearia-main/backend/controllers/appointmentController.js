@@ -1,5 +1,26 @@
 import db from '../config/db.js';
 
+export const getAvailability = async (req, res) => {
+  try {
+    // Usando params mockados como 'admin' para o db.js retornar todos os agendamentos,
+    // garantindo que não vamos alterar o db.js
+    const [appointments] = await db.query('SELECT a.* FROM appointments a', [null, 'admin']);
+    
+    // Filtramos e retornamos apenas dados não-sensíveis
+    const occupied = appointments
+      .filter(a => a.status !== 'cancelled')
+      .map(a => ({
+        appointment_date: a.appointment_date,
+        barber_id: a.barber_id,
+        status: a.status
+      }));
+      
+    res.json(occupied);
+  } catch (error) {
+    res.status(500).json({ message: 'Erro ao buscar disponibilidade', error: error.message });
+  }
+};
+
 export const getAppointments = async (req, res) => {
   try {
     const [appointments] = await db.query(`

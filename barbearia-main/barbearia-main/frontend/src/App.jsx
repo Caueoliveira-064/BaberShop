@@ -9,6 +9,7 @@ import Dashboard from './pages/Dashboard';
 import SubscriberBooking from './pages/SubscriberBooking';
 import Checkout from './pages/Checkout';
 import Navbar from './components/Navbar';
+import A11yButton from './components/A11yButton';
 import './index.css';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
   return (
     <Router>
       <Navbar />
+      <A11yButton />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
