@@ -2149,3 +2149,17 @@
 [2026-07-01T20:22:02.380Z] [QUERY] Appointments total: 0 | Filtered: 0 for user null (role: admin)
 [2026-07-01T20:22:05.653Z] [QUERY] SELECT * FROM users WHERE email = ? | Params: ["caue@gmail.com"]
 [2026-07-01T20:22:05.656Z] [QUERY] Found 0 users
+[2026-07-01T20:26:12.557Z] [QUERY] SELECT a.* FROM appointments a | Params: [null,"admin"]
+[2026-07-01T20:26:12.559Z] [QUERY] Appointments total: 0 | Filtered: 0 for user null (role: admin)
+[2026-07-01T20:26:12.562Z] [QUERY] SELECT a.* FROM appointments a | Params: [null,"admin"]
+[2026-07-01T20:26:12.564Z] [QUERY] Appointments total: 0 | Filtered: 0 for user null (role: admin)
+[2026-07-01T20:26:17.886Z] [QUERY] SELECT * FROM services | Params: undefined
+[2026-07-01T20:26:17.889Z] [QUERY] SELECT id, name, image FROM users WHERE role = "barber" OR role = "admin" | Params: undefined
+[2026-07-01T20:26:17.891Z] [QUERY] SELECT * FROM services | Params: undefined
+[2026-07-01T20:26:17.893Z] [QUERY] SELECT id, name, image FROM users WHERE role = "barber" OR role = "admin" | Params: undefined
+[2026-07-01T20:26:17.908Z] [QUERY] SELECT a.* FROM appointments a | Params: [null,"admin"]
+[2026-07-01T20:26:17.910Z] [QUERY] Appointments total: 0 | Filtered: 0 for user null (role: admin)
+[2026-07-01T20:26:20.117Z] [QUERY] SELECT a.* FROM appointments a | Params: [null,"admin"]
+[2026-07-01T20:26:20.120Z] [QUERY] Appointments total: 0 | Filtered: 0 for user null (role: admin)
+[2026-07-01T20:26:20.124Z] [QUERY] SELECT a.* FROM appointments a | Params: [null,"admin"]
+[2026-07-01T20:26:20.126Z] [QUERY] Appointments total: 0 | Filtered: 0 for user null (role: admin)
